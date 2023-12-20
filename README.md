@@ -57,4 +57,7 @@ This repository contains all the basics that are needed to kickStart terraform-l
 
 ```
 
+### When enclose a variable in Quotes and when to use $ notation for a variable ???
 
+> Whenever your variable is enclosed in a set of strings or in between a sentence, then we to enslose them in strings and with bash notation.
+> Strings are supposed to be enclosed in double quotes whilst Numbers & Booleans don't need any type of quotes.
