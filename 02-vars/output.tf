@@ -76,5 +76,11 @@ output "city_name" {
 variable "state" {} 
 
 output "state_name" {
-    value = var.city 
+    value = var.state 
+}
+
+variable "country" {} 
+
+output "country_name" {
+    value = var.country 
 }
