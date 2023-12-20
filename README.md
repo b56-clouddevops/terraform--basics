@@ -30,3 +30,31 @@ This repository contains all the basics that are needed to kickStart terraform-l
       *  Overall, companies adopt Terraform to streamline and automate their infrastructure management processes, improve collaboration among teams, ensure consistency across environments, and take advantage of the benefits of infrastructure as code.
 
 ```
+
+### What are the 4 commands or options that you often use while dealing terrform ?
+
+```
+    $ terraform init        : Initializes t erraform working directory by downloading the necessary providers and modules specified in the configuration.
+
+    It prepares the directory to be used with Terraform, setting up the backend, plugins, and other necessary components for managing infrastructure as code.
+
+    $ terraform plan        : It previews the changes to infrastructure before applying them, showing the actions Terraform will take to achieve the desired state specified in the configuration.
+
+
+    $ terraform apply       : It applies the changes defined in the Terraform configuration, creating, updating, or deleting resources to achieve the desired infrastructure state. ( Techincally applies the changes show on the plan )
+
+```
+
+### What are + , -,  -/+ when dealing with terraform plan ?
+
+
+```
+    + (Plus): Indicates a resource that Terraform plans to create as part of the proposed changes. This means a new resource will be added to the infrastructure when you apply the plan.
+
+    - (Minus): Indicates a resource that Terraform plans to destroy. This means that the associated infrastructure resource will be deleted when you apply the plan.
+
+    -/+ (Minus Plus): Indicates a resource that Terraform plans to both destroy and recreate. This typically happens when there are changes to a resource that require recreation rather than an in-place update. The resource will be first destroyed, and then a new one will be created in its place.
+
+```
+
+
