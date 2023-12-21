@@ -3,6 +3,6 @@ resource "aws_instance" "app" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "HelloWorld"
+    Name = "DevOps-With-AWS-LabInstance"
   }
 }
