@@ -8,7 +8,7 @@ resource "aws_instance" "app" {
 }
 
 output "instance_dns" {
-    value = aws_instance.app.arn.private_dns                                      # attributes
+    value = aws_instance.app.private_dns                                      # attributes
 }
 
 
