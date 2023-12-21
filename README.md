@@ -125,7 +125,9 @@ In Terraform, variables play a crucial role in parameterizing your infrastructur
 Ex : 
     Did a change in the tag, terraform updated the name of the instane without any disruption
     Did a change of instance_type : Terraform shutdowns the machine and changed the instance and then started ( disruptive )
-    
+    Did a change of AMI, instance was recreated.
 
+
+Based on the type of change that you make, terraform is going to act accordingly, that also means based on the type of change it can be either disruptive or non-disruptive.
 
 ```
