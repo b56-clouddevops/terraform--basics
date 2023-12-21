@@ -117,3 +117,13 @@ In Terraform, variables play a crucial role in parameterizing your infrastructur
 
         Ex : private_ip, instance_id
 ```
+
+
+### What will happen when there is change in the code ? Is it going to destroy and create the infra or just updates the changes as per what's defined the code ????
+
+```
+Ex : 
+    Did a change in the tag, terraform update the name of the instane.
+    
+
+```
