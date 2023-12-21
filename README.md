@@ -144,3 +144,12 @@ Based on the type of change that you make, terraform is going to act accordingly
     TERRAFORM considers the properties that are mentioned in the code as a source of truth and will vanish the changes that are done manually.
 
 ```
+
+
+### Datasource 
+
+```
+    Datasource in terraform helps you fetch the information of the already existing resources!!!!
+
+    These dataSources are also specific to the resources and you need to get the infomation from the terraform documentation.
+```
