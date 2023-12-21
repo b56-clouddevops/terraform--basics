@@ -90,3 +90,11 @@ variable "environment" {}
 output "environment_name" {
     value = "Name of the environment is ${var.environment}"
 }
+
+
+# Example of the usage of Shell Varaible
+variable "course" {}
+
+output "course_op" {
+    value   = var.course
+}
