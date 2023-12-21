@@ -122,6 +122,7 @@ In Terraform, variables play a crucial role in parameterizing your infrastructur
 ### What will happen when there is change in the code ? Is it going to destroy and create the infra or just updates the changes as per what's defined the code ????
 
 ```
+
 Ex : 
     Did a change in the tag, terraform updated the name of the instane without any disruption
     Did a change of instance_type : Terraform shutdowns the machine and changed the instance and then started ( disruptive )
