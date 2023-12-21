@@ -132,3 +132,15 @@ Ex :
 Based on the type of change that you make, terraform is going to act accordingly, that also means based on the type of change it can be either disruptive or non-disruptive.
 
 ```
+
+
+### What will happen if you change any of the properties of the instance manually that was provisioned with terraform ???
+
+```
+    Then terraform considers that as a DRIFT.
+
+    Drift means change in the configuration than what terraform has created !!!
+
+    TERRAFORM considers the properties that are mentioned in the code as a source of truth and will vanish the changes that are done manually.
+
+```
