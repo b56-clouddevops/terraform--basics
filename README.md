@@ -153,3 +153,37 @@ Based on the type of change that you make, terraform is going to act accordingly
 
     These dataSources are also specific to the resources and you need to get the infomation from the terraform documentation.
 ```
+
+
+### what is terraform state file ?
+```
+
+    The Terraform state file is a JSON-formatted file that keeps track of the resources managed by Terraform and their current state in the target infrastructure.
+
+    That also means storing the STATE File also needs some better strategy!!!
+```
+
+
+### What will happen if you lose the stateFile ?
+
+
+```
+    That can be referred as catastrophy and that's not at all acceptable.
+
+    This means that terraform lost track of all the infra changes made or created by it.
+```
+
+### Then what's the best strategy to store or host the statefile ?
+
+```
+    1) Hosting a remote backend to store stateFile, so that everyone in team or your terraform always looks for the statefile on a central location.
+    2) Enable versioning to the backend.
+    3) Enable encrytion the backend bucket
+```
+
+### What is a Backend In Terraform ?
+
+```
+    A backend defines where Terraform stores its state data files.
+
+```

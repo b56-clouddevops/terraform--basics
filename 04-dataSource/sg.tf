@@ -1,6 +1,6 @@
-resource "aws_security_group" "allow_tls" {
-  name                  = "b56_allow_tls"
-  description           = "B56 Allow TLS inbound traffic"
+resource "aws_security_group" "allows_tls" {
+  name                  = "batch56_allow_tls"
+  description           = "Batch56 Allow TLS inbound traffic"
 
   ingress {
        description      = "SSH from VPC"
