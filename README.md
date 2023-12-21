@@ -123,7 +123,9 @@ In Terraform, variables play a crucial role in parameterizing your infrastructur
 
 ```
 Ex : 
-    Did a change in the tag, terraform update the name of the instane.
+    Did a change in the tag, terraform updated the name of the instane without any disruption
+    Did a change of instance_type : Terraform shutdowns the machine and changed the instance and then started ( disruptive )
     
+
 
 ```
