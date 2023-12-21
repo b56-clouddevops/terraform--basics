@@ -4,7 +4,7 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = [aws_security_group.allows_tls.id]
 
     tags = {
-             Name        = "AWS-LabInstance"
+             Name        = "AWSCloud-LabInstance"
     }
 }
 
