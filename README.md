@@ -61,3 +61,59 @@ This repository contains all the basics that are needed to kickStart terraform-l
 
 > Whenever your variable is enclosed in a set of strings or in between a sentence, then we to enslose them in strings and with bash notation.
 > Strings are supposed to be enclosed in double quotes whilst Numbers & Booleans don't need any type of quotes.
+
+
+# Varaible Precenden In Terraform
+
+In Terraform, variables play a crucial role in parameterizing your infrastructure code. Understanding the precedence of different variable sources helps you manage and prioritize configuration values effectively. Here's a brief overview of the Terraform variable precedence:
+
+ ###   1) -var Command-Line Option:
+
+```
+                Highest precedence.
+                Values passed using the -var command-line option directly override any other variable sources.
+                Example: terraform apply -var="instance_count=3"
+```
+###    2) -var-file Command-Line Option:
+
+```
+                Next in precedence after the -var command-line option.
+                Allows you to specify a file containing variable values.
+                Example: terraform apply -var-file="custom-vars.tfvars"
+```
+###    3) terraform.auto.tfvars:
+
+```
+                Automatically loaded if present in the working directory.
+                Lower precedence compared to command-line options.
+                Useful for storing default values and environment-specific configurations.
+                    Example: terraform.auto.tfvars
+```
+####    4) terraform.tfvars:
+```
+                Similar to terraform.auto.tfvars but requires an explicit load using the -var-file command-line option.
+                Lower precedence compared to command-line options.
+
+                        Example: terraform apply -var-file="terraform.tfvars"
+                Understanding this precedence allows you to manage your Terraform configurations flexibly, whether you're setting default values, using environment-specific overrides, or providing values dynamically through command-line options.
+```
+
+
+# Attribure vs Argument In Terraform
+
+
+### Arguments
+
+```
+    Properties of the resource that you would to define as a part of the creation.
+        Ex:  instance_type, ami
+
+```
+
+### Attributes 
+
+```
+    Attributes are the properties of the machine that woould be coming up post the creation of the resource.
+
+        Ex : private_ip, instance_id
+```

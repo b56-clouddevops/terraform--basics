@@ -93,6 +93,10 @@ output "environment_name" {
 
 
 # Example of the usage of Shell Varaible
+
+# You can supply the value of the SHELL Variable from Command Line using export
+# export TF_VAR_varName=value
+
 variable "course" {}
 
 output "course_op" {
