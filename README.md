@@ -205,3 +205,21 @@ Based on the type of change that you make, terraform is going to act accordingly
     In Terraform, you cannot pass the outputs from one module to another module directly. It should be only through ROOT Module Only.
 
 ```
+
+
+### Provisioners In Terraform
+
+    Provisioners in terraform help's us to execute some either on Local Instance from where you're running terraform or on the top of the resources created by terraform.
+
+     It's is a mechanism that allows execution of scripts or commands on a resource during or after its creation, enabling customization and configuration. Provisioners are often used for tasks like software installation, configuration management, or any post-resource creation actions.
+
+
+### Types Of Provsioners In Terraform :  
+
+    Based on where you execute the task, we have 3 types of provisioners : 
+
+```
+    1) Local Provisoner           [ This execute tasks on the top of the local machine where you're running  terraform ]
+    2) Remote Provisioner         [ This executed tasks on the top of the remote machine or the created infra by terraform ]
+    3) File Provisioner           [ This is used to copy the file from local machine to the created resouce ]
+```
