@@ -1,3 +1,5 @@
+# Root Module
+
 provider "aws" {}
 
 terraform {
@@ -8,6 +10,7 @@ terraform {
   }
 }
 
+# Calls backend Modules
 module "local-module" {
     source      =  "./local"
 }
