@@ -191,3 +191,17 @@ Based on the type of change that you make, terraform is going to act accordingly
 
 ### Modules Sources In Terraform !!!
 
+```
+    1) S3 Bucket
+    2) Github                       ( Keeping Modules Remote is quite mature thing and we would like to use it more in our training )
+    3) Local Modules
+    4) Terraform Registry Modules
+```
+
+
+### How can we pass the outputs from One Module to Other In terraform 
+
+```
+    In Terraform, you cannot pass the outputs from one module to another module directly. It should be only through ROOT Module Only.
+
+```
