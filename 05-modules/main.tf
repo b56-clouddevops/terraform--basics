@@ -14,3 +14,10 @@ terraform {
 module "local-module" {
     source      =  "./local"
 }
+
+# This is how we fetch the values from a backend Module. 
+# mdoule.moduleName.outputNameDeclaredInTheBackend
+
+output "public_ip" {
+    value = module.local-module.public_ip
+}
