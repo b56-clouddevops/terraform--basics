@@ -6,6 +6,12 @@ resource "aws_instance" "app" {
   tags = {
     Name = "EC2-From-Modules"
   }
+
+# Declaring the resource with in the resource!!!
+
+  provisioner "local-exec" {
+    command = "echo ${self.private_ip} >> /home/centos/local_private_ips.txt"
+  }
 }
 
 # Step 3:  Declare that Input that you need to consume as variable
