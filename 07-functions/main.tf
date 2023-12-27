@@ -1,5 +1,5 @@
 resource "aws_instance" "web" {
-  count                  = 3
+  count                  = 0
 
   ami                    =  data.aws_ami.ami.id                                # argument
   instance_type          = "t3.micro"
@@ -8,4 +8,3 @@ resource "aws_instance" "web" {
              Name        = "AWSCloud-LabInstance"
     }
 }
-
