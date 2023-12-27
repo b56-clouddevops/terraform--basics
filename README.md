@@ -222,6 +222,7 @@ Based on the type of change that you make, terraform is going to act accordingly
     1) Local Provisoner           [ This execute tasks on the top of the local machine where you're running  terraform ]
     2) Remote Provisioner         [ This executed tasks on the top of the remote machine or the created infra by terraform ]
     3) File Provisioner           [ This is used to copy the file from local machine to the created resouce ]
+    4) Connection Provisioner
 ```
 
 
@@ -236,5 +237,5 @@ Based on the type of change that you make, terraform is going to act accordingly
     But provisioners should always be kept with in the resoruce only!!!!
 
     That's why there is a null resource, which creates nothing and that's main intention is to run provisoners.
-    
+
 ```
