@@ -5,6 +5,6 @@ resource "aws_instance" "web" {
   instance_type          = "t3.micro"
 
     tags = {
-             Name        = "AWSCloud-LabInstance-${count.index}+1"
+             Name        = "AWSCloud-LabInstance-${count.index+1}"
     }
 }
