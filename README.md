@@ -239,3 +239,46 @@ Based on the type of change that you make, terraform is going to act accordingly
     That's why there is a null resource, which creates nothing and that's main intention is to run provisoners.
 
 ```
+
+
+### What are the points to be considered while designing and creating a network ?
+
+```
+    1) Understand the business need of the network
+    2) Analyze the number of ip address needed.
+    3) Understand how many subnetsa are needed.
+    4) Conclude how many subnets need access to internet and how many don't
+    5) Select a CIDR Range either Class-A or B ( 10 or 172 series )
+    6) Ensure the selected CIDR Range is not conflicing with any of your existing AWS Accounts in your project.
+
+```
+
+### For our roboshop project, how many Ip's do I need ?
+
+```
+    DEV  :   256   :   10.0.0.0/24 
+    PROD :  1024   :   10.1.0.0/22
+
+```
+
+
+### What is Public and Private Subnets ?
+
+```
+    Both of them are pieces from a network. But the major difference is Public IP Address. 
+    
+    In public subnets, all the machines that are launched will have a Public IP Address by default and will have direct access to internet.
+
+    In private subnets, all the machines that are launched will only have a private IP Address and no Public IP Address ( that means we cannot connect to these machines from public network )
+
+```
+
+
+###  In our project, what all machines should be in private network .
+
+```
+    Apart from frontend, rest of all the components  [ backend, db's ] should be in Private Network Only
+
+```
+
+
