@@ -289,6 +289,24 @@ Based on the type of change that you make, terraform is going to act accordingly
     2) Create subnets one in us-east-1a and us-east-1b with subnets as 10.2.0.0/25 and 10.2.0.128/25 respectively
     3) Ensure you mention one of the subnet as public and the other as private.
     4) Ensure you enable "Enable auto-assign public IPv4 address" on the public-subnet and this ensures the Public IP Address to the instances launched in this subnet. Don't do the same for Private-Subnet.
+    5) Create a Internet Gateway and attach it to the roboshop-vpc ( you can attach only one IGW per VPC )
+    6) Create a Public-Route Table and associate with the public-subnet and with a route of 0.0.0.0/0 with IGW
+    7) Create a Private-Route Table and associate with private-subnet and with a default route.
+    8) Now you should be able to SSH to the machines launched in the public-subnet
+
+    9) Also public-machines should be able to talk to the internet. But not the private machines.
+
+    10) All the machine should have access to internet and why ?  ( If a machine needs to download a package, how do we update packages )
+
+    11) We need to desing the network in such a way that, No one should be able to access the private machines from the internet. But, if the private machines want to talk, they should be able to talk to the internet.
+
+    12) But if you try to SSH from your workStation to any of the Public or private machines with their Privat IP, it won't as they are in 2 different networks.
+
+    13) How can we enable private communication between 2 different VPC's ? [ Using VPC Peering ] 
+
+    14) Create VPC Peering as demonstrated between 2 different VPC's
+
+    15) Update the route tables of default-rt, public-rt and private-rt with respective CIDR range, then private communication would be enabled between the 2 VPC's.
 
 
 ```
