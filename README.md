@@ -267,7 +267,7 @@ Based on the type of change that you make, terraform is going to act accordingly
 ```
     Both of them are pieces from a network. But the major difference is Public IP Address. 
     
-    In public subnets, all the machines that are launched will have a Public IP Address by default and will have direct access to internet.
+    In public subnets, all the machines that are launched will have a Public IP Address by default and can be accessed directly from the internet.
 
     In private subnets, all the machines that are launched will only have a private IP Address and no Public IP Address ( that means we cannot connect to these machines from public network )
 
@@ -278,6 +278,18 @@ Based on the type of change that you make, terraform is going to act accordingly
 
 ```
     Apart from frontend, rest of all the components  [ backend, db's ] should be in Private Network Only
+
+```
+
+
+### How can I implement the network with a public and a private network ?
+
+```
+    1) Create a VPC with default tenancy and mention the CIDR as 10.2.0.0/24
+    2) Create subnets one in us-east-1a and us-east-1b with subnets as 10.2.0.0/25 and 10.2.0.128/25 respectively
+    3) Ensure you mention one of the subnet as public and the other as private.
+    4) Ensure you enable "Enable auto-assign public IPv4 address" on the public-subnet and this ensures the Public IP Address to the instances launched in this subnet. Don't do the same for Private-Subnet.
+
 
 ```
 
