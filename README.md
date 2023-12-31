@@ -259,6 +259,16 @@ Based on the type of change that you make, terraform is going to act accordingly
     DEV  :   256   :   10.0.0.0/24 
     PROD :  1024   :   10.1.0.0/22
 
+    In Dev VPC, let's provision 2 subnets in Public Subnet in us-east-1a, us-east-1b  and 2 Private Subnets in us-east-1a, us-east-1b keeping the high availability in mind.
+
+    DEV VPC CIDR   : 10.0.0.0/24 
+        public-subnet-cidr  : 10.0.0.0/26   , 10.0.0.64/26
+        private-subnet-cidr : 10.0.0.128/26	, 10.0.0.192/26	
+
+    PROD VPC CIDR  : 10.1.0.0/22
+        public-subnet-cidr  : 10.1.0.0/24 , 10.1.1.0/24
+        private-subnet-cidr : 10.1.2.0/24 , 10.1.3.0/24
+
 ```
 
 
