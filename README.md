@@ -322,3 +322,38 @@ Based on the type of change that you make, terraform is going to act accordingly
 ```
 
 
+
+
+### What is the best way to create Infrastrucure with Terraform ??
+
+## Is it good to to create the entire infrastrcure in a single go and with a single repository ?
+
+```
+ This in turns creates a single statefile for the entire Infrastructure.
+
+ This also means if you just want to change a tag for a EC2 Instance, it has to refresh and check the entire infra and eventually the time for even small chanegs will take lot of time and sometime you would see catastrohic plan events.
+
+ So, it's not at all recommended to keep the entire infrastrucure in a single go.
+
+ It's recommented to keep and prepare all the components individually so that the staefiles would be different and in turn management and latency would be easy.
+
+```
+
+
+### What Terrafile does ?
+
+```
+Terrafile just clones the backend module from the mentioned branch and will keep the code local.
+
+Remote module will be downloaded and will be kept locally available and ensure you change the source in the main to local.
+```
+
+
+### Can Teraform Manage the resources that we were not created by Terraform ???
+```
+    Partially YES!
+
+    Some resources in AWS can be managed by terraform even though it was created manually.
+
+        Ex : You want to add a ROUTE to default route-table in the VPC.
+```
