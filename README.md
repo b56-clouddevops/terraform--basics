@@ -367,3 +367,38 @@ Remote module will be downloaded and will be kept locally available and ensure y
     2) Provision the Databases ( Mongodb, MySQL, Redis, RabbitMQ )
     3) Provision the Applicaitons Instances
 ```
+
+### Managed Services that we use for DB's on AWS ?
+
+```
+        MongoDB     ---->   Document DB             ( NodeJS Components Needs some code change )
+        MySQL       ---->   RDS
+        Redis       ---->   Elastic Cache
+        RabbitMQ    ---->   Amazon MQ               ( Out applicaiton won't support Amazon-MQ, we will fall back to RabbitMQ on EC2 only)
+```
+
+
+### With Terraform, how are we going to handle allthe 4 DB's ?
+
+```
+    tf-module-databases
+    terraform-databases
+
+```
+
+
+### How one resource in AWS can read the information from another terraform remote statefile ???
+
+```
+    This usecase usually comes up when you modularize the infrastructure and create them in different statefiles.
+
+    As a best practice, it's always recommended to keep things isolated and this gives you multiple statefiles and which in turn gives you
+    the opportunity to maintain multiple statefiles.
+
+    But how to stare the information between 2 different state files? 
+
+        1) Usually, whatever the information that we would like to share, we will mark them in the outputs.
+        2) Marking them as outputs will not only display the information but also registers that info on Statefile which further can be used by others to access that information
+
+    Now using Terraform Remote State Datasource, we can fetch the info/outputs from the intended statefile
+```
