@@ -357,3 +357,13 @@ Remote module will be downloaded and will be kept locally available and ensure y
 
         Ex : You want to add a ROUTE to default route-table in the VPC.
 ```
+
+
+
+### What are needs to be created to make project 100% provisiond with terraform only ?
+
+```
+    1) Provision VPC 
+    2) Provision the Databases ( Mongodb, MySQL, Redis, RabbitMQ )
+    3) Provision the Applicaitons Instances
+```
